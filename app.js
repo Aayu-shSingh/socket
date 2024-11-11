@@ -6,14 +6,14 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5003;
 
 // Configure Server Path name
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Serving Static file using express
 //console.log(dirname(fileURLToPath(import.meta.url)));
-app.use(express.static(join(__dirname + "/public")));
+app.use(express.static(join(__dirname + "/")));
 
 // Getting the server instance from express.
 const expServer = app.listen(PORT, () => {
